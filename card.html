@@ -27,15 +27,31 @@
             color: #555;
             text-align: center;
             margin-top: 10px;
-            font-style: italic;
+            font-family:Arial, Helvetica, sans-serif;
         }
+        .card{
+            background-color: lightblue;
+        }
+        .spinner-border{
+            
+        float: center;
+       justify-content: center; /* Centers horizontally */
+        align-items: center;     /* Centers vertically */
+            /* Adjust as needed for full-screen or container height */
+        }  
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }   
+
 </style>
 
 </head>
 <body>
     
 
-    <div style="width: 200px; height: 350px; border: 1px solid black; padding: 10px; margin: 10px auto; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+    <div class="card" style="width: 200px; height: 350px; border: 1px solid black; padding: 10px; margin: 10px auto; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
         <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="Card image" class="card-img-top">
 
         <h2 class="card-title ">aryan
@@ -48,11 +64,15 @@
         <h2 class="card-title ">
             9th grader
 
-        </h2>
+        </h2><hr>
     </div>
-    <div class="spinner-border"></div>
+   <center><div class="spinner-border" style="align-items: center;"></div></center>
 
-    <div class="container">
+    <center><div class="container" style="margin-top: 6px  ; "> </div> </center> 
+   <center> <h6> loading.....</h6></center><hr>
+
+
+
         <div class="pagination">
             <div class="d-flex">
 
@@ -69,7 +89,13 @@
                     <a class="page-link" href="#">3</a>
 
                     <li class="page-item">
+                    <a class="page-link" href="#">4</a>
+
+                    <li class="page-item">
                     <a class="page-link" href="#">next</a>
+
+                    
+
 
                 </li>
             </div>
