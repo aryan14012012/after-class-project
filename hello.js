@@ -1,2 +1,12 @@
-document.getElementById("aryan").innerHTML = "hello, my name is aryan and i am 13 years old"
-document.getElementById("arry").innerHTML = "i am in 8th grade and i am in the 2nd year of middle school"   
+ function cal(a, b) {
+       
+    console.log(a + b);
+    console.log(a - b);
+    console.log(a * b);
+    console.log(a / b);
+
+ }
+
+ cal(5,5);
+ cal(10,5);
+ cal(20,5);
