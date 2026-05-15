@@ -1,7 +1,2 @@
- let a=66
- function hello(){
-   var  b=88
-   
- }  
-hello()
- console.log(a)
+ const name = " aryan   "; 
+  console.log(name.replace("a", "A"))
