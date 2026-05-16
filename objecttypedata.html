@@ -14,6 +14,24 @@
     <p id="demo1"></p>
     <p id="demo2"></p>
 
+
+    <h2>Math Built in object in JS: </h2>
+
+<span><p>Math.pow(x,y) returns the value of x to the power of y:</p></span>
+
+<p id="math"></p>
+
+<span><p>Math.floor(x) returns the value of x rounded <strong>down</strong> to its nearest integer:</p></span>
+
+<p id="math1"></p>
+
+<span>
+
+<p>Math.sqrt(x) returns the square root of x:</p></span>
+
+<p id="math2"></p>
+
+
     <script>
         //create an object
          a={name:"aryan", age:15, city:"gurugram"};
@@ -21,7 +39,16 @@
             
          document.getElementById("demo").innerHTML=a.name +" is " + a.age+ " years old and lives in " + a.city;
          document.getElementById("demo1").innerHTML=b["name"] +" is " + b["age"]+ " years old and lives in this city " + b["city"];
+          
+
+
+
+
+         document.getElementById("math").innerHTML=Math.pow(35,4);
+         document.getElementById("math1").innerHTML=Math.floor(4.95669659);
+         document.getElementById("math2").innerHTML=Math.sqrt(4611);
          
+
     </script>
     
 </body>
