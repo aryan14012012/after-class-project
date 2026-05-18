@@ -13,8 +13,9 @@
     <p id="demo"></p>
     <p id="demo1"></p>
     <p id="demo2"></p>
-
-
+<p id="trigo"></p>
+ <p id="cos"></p>
+ <p id="tan"></p>
     <h2>Math Built in object in JS: </h2>
 
 <span><p>Math.pow(x,y) returns the value of x to the power of y:</p></span>
@@ -59,6 +60,23 @@
             func1(1,2,5);
 
 
+
+            document.getElementById("trigo").innerHTML=Math.sin(45);
+            document.getElementById("cos").innerHTML=Math.cos(46);
+            document.getElementById("tan").innerHTML=Math.tan(82);
+
+
+function trigonometricValues(sin,cos,tan) {
+
+    mathrd=Math.sin(sin);
+    mathrc=Math.cos(cos);   
+    mathrt=Math.tan(tan);
+}
+
+            
+
+
+           
     </script>
     
 </body>
