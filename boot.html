@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title> Digital Zoo Manager</title>
+
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background-color: rgb(68, 147, 216);
+
+text-align: center;
+
+color: #222222;
+
+}
+
+h1 {
+
+color: darkgreen;
+
+}
+
+#zoo {
+
+width: 420px;
+
+border: 3px solid darkgreen;
+
+border-radius: 12px;
+
+background-color: white;
+
+margin: 20px auto;
+
+padding: 15px;
+
+}
+
+.zone {
+
+border: 2px solid seagreen;
+
+border-radius: 8px;
+
+margin: 10px;
+
+padding: 12px;
+
+background-color: #9cd2c5;
+
+text-align: left;
+
+}
+
+.animal {
+
+font-weight: bold;
+
+color: orange;
+
+}
+
+button {
+
+background-color: rgb(119, 238, 119);
+
+color: white;
+
+border: 5px solid rgb(34, 139, 34);
+
+border-radius: 20px;
+
+padding: 9px 22px;
+
+cursor: pointer;
+
+font-weight: bold;
+
+}
+
+#output {
+
+width: 400px;
+
+border: 2px dashed rgb(37, 139, 37);
+
+border-radius: 10px;
+
+background-color: #dc8a8a;
+
+margin: 20px auto;
+
+padding: 12px;
+
+text-align: left;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>My Digital Zoo Manager</h1>
+
+<p>
+
+Welcome to the Digital Zoo Manager! Click the button below to see how JavaScript can interact with the HTML DOM to manage our virtual zoo.
+
+</p>
+
+<div id="zoo">
+
+<div class="zone" id="tigerZone">
+
+<h2>Tiger Zone</h2>
+
+<p>Animal, In This Zone: <span class="animal">Tiger</span></p>
+
+</div>
+
+<div class="zone" id="GirrafeZone">
+
+<h2>Giraffe Zone</h2>
+
+<p>Animal, In This Zone: <span class="animal">Giraffe</span></p>
+
+</div>
+
+<div class="zone" id="pandaZone">
+
+<h2>Panda Zone</h2>
+
+<p>Animal, In This Zone: <span class="animal">Panda</span></p>
+
+</div>
+
+</div>
+
+<button onclick="manageZoo()">Manage  The Zoo</button>
+
+<div id="output">
+
+  If You Click Manage The Zoo , zoo information will appear here.
+
+</div>
+
+<script>
+
+function manageZoo() {
+
+// HTML DOM: Selecting elements from the webpage
+
+let zoo = document.getElementById("zoo");
+
+let tigerZone = document.getElementById("tigerZone");
+
+let giraffeZone = document.getElementById("GirrafeZone");
+
+let pandaZone = document.getElementById("pandaZone");
+
+let output = document.getElementById("output");
+
+// The DOM Tree: zoo is the parent container of all animal zones
+
+let parentNodeName = tigerZone.parentNode.id;
+
+// Parent, Child, and Sibling Nodes
+
+let firstChildZone = zoo.children[0].id;
+
+let secondChildZone = zoo.children[2].id;
+
+let nextSiblingZone = tigerZone.nextElementSibling.id;
+
+let previousSiblingZone = pandaZone.previousElementSibling.id;
+
+// Types of Nodes
+
+let elementNodeType = tigerZone.nodeType;
+
+let textNodeType = tigerZone.firstChild.nodeType;
+
+// JavaScript and the DOM: Changing content and style
+
+tigerZone.style.backgroundColor = "#fff3cd";
+
+giraffeZone.style.backgroundColor = "#d1ecf1";
+
+pandaZone.style.backgroundColor = "#f8d7da";
+
+tigerZone.querySelector("h2").innerHTML = "Updated Tiger Zone";
+
+giraffeZone.querySelector("h2").innerHTML = "Updated Giraffe Zone";
+
+pandaZone.querySelector("h2").innerHTML = "Updated Panda Zone";
+
+output.innerHTML =
+
+"<strong>DOM Tree Information:</strong><br>" +
+
+"Parent of Tiger  Zone: " + parentNodeName + "<br>" +
+
+"First child of Zoo: " + firstChildZone + "<br>" +
+
+"Second child of Zoo: " + secondChildZone + "<br><br>" +
+
+"<strong>Sibling Node Information:</strong><br>" +
+
+"Next sibling of Tiger Zone: " + nextSiblingZone + "<br>" +
+
+"Previous sibling of Panda Zone: " + previousSiblingZone + "<br><br>" +
+
+"<strong>Types of Nodes:</strong><br>" +
+
+"Tiger Zone element node type: " + elementNodeType + "<br>" +
+
+"Tiger Zone first child text node type: " + textNodeType + "<br><br>" +
+
+"<strong>DOM Update:</strong><br>" +
+
+"The animal zone headings and background colours were updated using JavaScript.";
+
+}
+
+</script>
+
+</body>
+
+</html>
+
