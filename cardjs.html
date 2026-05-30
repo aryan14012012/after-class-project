@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>My HEROS Cards</title>
+
+<style>
+
+body {
+
+font-family: Arial;
+
+background: #f0f4ff;
+
+padding: 30px;
+
+text-align: center;
+
+}
+
+h1 { color: #6668d0; }
+
+p { color: #555; }
+
+.cards {
+
+display: flex;
+
+justify-content: center;
+
+gap: 20px;
+
+margin-top: 51px;
+
+}
+
+.card {
+
+background: white;
+
+border: 3px solid #688328;
+
+border-radius: 12px;
+
+padding: 20px;
+
+width: 200px;
+
+}
+
+.planet-name {
+
+font-size: 22px;
+
+font-weight: bold;
+
+color: #333;
+
+}
+
+.hero-about { color: #666; margin-top: 10px; font-size: 14px; }
+
+button {
+
+background: #3c3fd7;
+
+color: white;
+
+border: none;
+
+padding: 12px 28px;
+
+border-radius: 8px;
+
+cursor: pointer;
+
+font-size: 16px;
+
+margin-top: 10px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>My HEROS Cards</h1>
+
+<p>Use a JavaScript class to build hero cards!</p>
+
+<button onclick="showPlanets()">  Click here to get info about HEROS!</button>
+
+<div class="cards">
+
+<div id="card1"></div>
+
+<div id="card2"></div>
+
+<div id="card3"></div>
+
+<div id="card4"></div>
+
+<div id="card5"></div>
+
+</div>
+
+
+<script>
+
+class Hero {
+
+constructor( name, about) {
+
+this.name = name;
+
+this.about =about;
+
+}
+
+describe() {
+
+return this.name + " has these superpowers: " + this.about;
+}
+
+}
+
+function showPlanets() {
+
+    let p1 = new Hero("Spider-Man", "Has superhuman strength and agility and can cling to walls ");
+
+let p2 = new Hero("Iron Man", "Known for his advanced technology and armor suit");
+
+let p3 = new Hero("Dr. Strange", "Master of the mystic arts with powerful magical abilities");
+
+let p4 = new Hero("Captain Marvel", "Has superhuman strength, flight, and energy projection");
+
+let p5 = new Hero("Black Panther", "King of Wakanda with enhanced strength and agility");
+
+document.getElementById("card1").innerHTML =
+
+"<div class='card'><div class='hero-name'>" + p1.name + "</div>" +
+
+"<div class='hero-about'>" + p1.describe( ) + "</div></div>";
+
+document.getElementById("card2").innerHTML =
+
+"<div class='card'><div class='hero-name'>" + p2.name + "</div>" +
+
+"<div class='hero-about'>" + p2.describe() + "</div></div>";
+
+document.getElementById("card3").innerHTML =
+
+"<div class='card'><div class='hero-name'>" + p3.name + "</div>" +
+
+"<div class='hero-about'>" + p3.describe() + "</div></div>";
+
+document.getElementById("card4").innerHTML =
+"<div class='card'><div class='hero-name'>" + p4.name + "</div>" +
+"<div class='hero-about'>" + p4.describe() + "</div></div>";
+
+document.getElementById("card5").innerHTML =
+"<div class='card'><div class='hero-name'>" + p5.name + "</div>" +
+"<div class='hero-about'>" + p5.describe() + "</div></div>";     
+
+}
+
+</script>
+
+</body>
+
+</html>
