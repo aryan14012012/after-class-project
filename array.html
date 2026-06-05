@@ -18,26 +18,35 @@
 
     <p id="result"></p>
 
+    <P id="product_value"> </P>
+
 
     <script>
-        var points = [543, 2, 9, 1, 5, 600, 4];
+        var number = [543, 2, 9, 1, 5, 600, 4];
 
-        document.getElementById("result").innerHTML = points;
+        document.getElementById("result").innerHTML = number;
 
 
         function ascending(){
-            points.sort(function(a, b)
+            number.sort(function(a, b)
             {return a - b});
 
 
-            document.getElementById("result").innerHTML = points;
+            document.getElementById("result").innerHTML = number;
         }
         function descending(){
-            points.sort(function(a, b)
+            number.sort(function(a, b)
             {return b - a});
-            document.getElementById("result").innerHTML = points;
+            document.getElementById("result").innerHTML = number;
         }
+         function myfunction(num){
+            return num * 10;
+         }
 
+         var newarray = number.map(myfunction); 
+
+         document.getElementById("product_value").innerHTML = newarray;
+        
 
     </script>
 </body>
