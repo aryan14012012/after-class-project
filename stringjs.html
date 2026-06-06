@@ -13,9 +13,14 @@
 
     <p>The string methods can convert a number to a string.</p>
 
+    <p>this example demonstrates the use <b>catch</b> to display an error</p>
+
 
     <p id="number_result"></p>
     <p id="string_result"> </p>
+
+
+    <p id="error_message"></p>
 
 <script>
 
@@ -25,6 +30,15 @@
 
     document.getElementById("number_result").innerHTML = x + y;
     document.getElementById("string_result").innerHTML = String(x) + String(y);
+
+    try{
+        addalert("Welcome guest!");
+
+    }
+
+    catch(err){
+        document.getElementById("error_message").innerHTML = err.message;
+    }
 
 
     </script>
