@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="guess" placeholder="Enter your guess">
+    <p id="error"></p>
+    <p id="para">Guess a number between 1 and 10:</p>
+    <button onclick="validation()">Submit Guess</button>
+
+
+
+</body>
+<script>
+
+
+     let setinterval = setInterval(() => {
+
+
+     }, 100000);
+
+    let randomNumber = Math.floor(Math.random() * 10) + 1;
+    console.log(randomNumber);
+
+    let para = document.getElementById("para");
+    let error = document.getElementById("error");   
+
+    function validation() {
+        let guessed = parseInt(document.getElementById("guess").value);
+        console.log(guessed);
+
+        if(guessed < 1) {
+            error.textContent = "number should be greater than 0";
+        }
+        else if(guessed > 10) {
+            error.textContent = "number should be less than 11";
+        }
+        else {
+            error.textContent = "";
+            if(randomNumber === guessed) {
+                para.textContent = "Congratulations! You guessed it right!";
+            }
+            else if(randomNumber < guessed) {
+                para.textContent = "Your number is high";
+            }
+            else {
+                para.textContent = "Your number is low";
+            }
+        }
+    }
+
+    </script>
+
+</html>
