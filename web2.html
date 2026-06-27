@@ -1,83 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="web2.css" />
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="https://kit.fontawesome.com/996973c893.js"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Roboto+Slab:wght@200;400;600;900&display=swap" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>web 2/3</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="web2.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <style>
+  /* CSS-only notification using :target */
+  #not-on-linkedin {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    display: none;
+    min-width: 220px;
+  }
+  #not-on-linkedin:target { display: block; }
+  #not-on-linkedin .close { text-decoration: none; font-weight: 700; padding-left: 10px; }
+  </style>
 </head>
 <body>
-    <section id="social-media" class="container-fluid">
-        <div class="container text-white py-5">
-            <h4 class="text-warning">Social Media</h4>
-            <h1 class="m-heading">Let's be friends</h1>
-            
-            <div class="row pt-5">
-                <div class="col-lg-3 col-md-6 col-12 media_link btn mb-3">
-                    <div class="row w-100 align-items-center">
-                        <div class="col-8 d-flex justify-content-start">
-                            <h3 class="m-0 text-white">LinkedIn</h3>
-                        </div>
-                        <div class="col-4 d-flex justify-content-end align-items-center">
-                            <i class="fa fa-linkedin fa-2x"></i>
-                        </div>
-                    </div>
-                </div>
+  <section id="social-media" class="container-fluid">
+    <div class="container text-white py-5">
+      <h4 class="text-warning">Social Media</h4>
+      <h1 class="m-heading">Let's be friends</h1>
 
-                <div class="col-lg-3 col-md-6 col-12 media_link btn mb-3">
-                    <div class="row w-100 align-items-center">
-                        <div class="col-8 d-flex justify-content-start">
-                            <h3 class="m-0 text-white">GitHub</h3>
-                        </div>
-                        <div class="col-4 d-flex justify-content-end align-items-center">
-                            <i class="fa fa-github fa-2x"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 media_link btn mb-3">
-                    <div class="row w-100 align-items-center">
-                        <div class="col-8 d-flex justify-content-start">
-                            <h3 class="m-0 text-white">YouTube</h3>
-                        </div>
-                        <div class="col-4 d-flex justify-content-end align-items-center">
-                            <i class="fa fa-youtube fa-2x"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 media_link btn bg-warning mb-3">
-                    <div class="row w-100 align-items-center">
-                        <div class="col-8 d-flex justify-content-start">
-                            <h3 class="m-0 text-dark">
-                                <a href="mailto:your-email@example.com">Email</a>
-                            </h3>
-                        </div>
-                        <div class="col-4 d-flex justify-content-end align-items-center">
-                            <i class="fa fa-envelope fa-2x"></i>
-                        </div>
-                    </div>
-                </div>
+      <div class="row pt-5">
+        <a id="linkedin-card" href="#not-on-linkedin" class="col-lg-3 col-md-6 col-12 media_link btn mb-3 d-block text-decoration-none">
+          <div class="row w-100 align-items-center">
+            <div class="col-8 d-flex justify-content-start">
+              <h3 class="m-0 text-white">LinkedIn</h3>
             </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+              <i class="fa fa-linkedin fa-2x text-white"></i>
+            </div>
+          </div>
+        </a>
+
+        <a id="github-card" href="https://github.com/aryan14012012/after-class-project" class="col-lg-3 col-md-6 col-12 media_link btn mb-3 d-block text-decoration-none">
+          <div class="row w-100 align-items-center">
+            <div class="col-8 d-flex justify-content-start">
+              <h3 class="m-0 text-white">GitHub</h3>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+              <i class="fa fa-github fa-2x"></i>
+            </div>
+          </div>
+        </a>
+
+        <a id="youtube-card" href="https://www.youtube.com/" class="col-lg-3 col-md-6 col-12 media_link btn mb-3 d-block text-decoration-none">
+          <div class="row w-100 align-items-center">
+            <div class="col-8 d-flex justify-content-start">
+              <h3 class="m-0 text-white">YouTube</h3>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+              <i class="fa fa-youtube fa-2x"></i>
+            </div>
+          </div>
+        </a>
+
+        <div class="col-lg-3 col-md-6 col-12 media_link btn bg-warning mb-3">
+          <div class="row w-100 align-items-center">
+            <div class="col-8 d-flex justify-content-start">
+              <h3 class="m-0 text-dark"><a href="#hello@example.com">Email</a></h3>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+              <i class="fa fa-envelope fa-2x"></i>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CSS :target notification element -->
+  <div id="not-on-linkedin" class="alert alert-info text-dark">I am not on LinkedIn <a href="#" class="close text-dark">&times;</a></div>
+
+  <main>
+    <section id="home" class="about-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-left">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZr_YnUzggXYsvISUNj8yKzTJs4FCzRixXt9oKOkmHTpMLNaEwWJhj5srf&s=10" alt="Thai Pavilion dining" class="img-fluid rounded shadow-sm" />
+          </div>
+          <div class="col-lg-6 text-white">
+            <span class="eyebrow text-warning mb-3 d-inline-block">Authentic Thai Cuisine</span>
+            <h1 class="display-4 font-weight-bold mb-3">Taste the flavors of Thailand</h1>
+            <p class="lead text-light">Thai Pavilion brings warm hospitality, fragrant spices, and handcrafted Thai favorites together for an unforgettable dining experience.</p>
+            <p>From zesty soups to savory noodles and sweet desserts, every dish is prepared with fresh herbs, coconut milk, and traditional Thai seasonings.</p>
+            <p>Join us for dinner and discover the true taste of Bangkok in a calm, elegant setting.</p>
+            <a href="#menu" class="btn btn-warning btn-lg mt-3">View Menu</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <div class="container text-muted text-center py-3 mt-5">
-            <h5>Copyright &copy; 2021 | <a class="text-warning text-decoration-none" href="file:///C:/Users/rayar/OneDrive/Desktop/after%20class%20project/web2.html">All Rights Are Reserved By Codingal Education</a></h5>
+    <section id="menu" class="projects-section py-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col text-center text-md-left">
+            <h2 class="text-warning">Chef's Specials</h2>
+            <p class="text-muted">A selection of beloved Thai dishes served with fresh flavors and aromatic herbs.</p>
+          </div>
         </div>
-    </footer>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card project-card h-100 shadow-sm">
+              <img src="pexels-elizabeth-zernetska-86424040-9001223.jpg" class="card-img-top" alt="Pancake" />
+              <div class="card-body">
+                <h5 class="card-title">Pan Cake</h5>
+                <p class="card-text">Light and fluffy pancakes served warm with syrup and berries.</p>
+                <a href="#" class="btn btn-warning">Order Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card project-card h-100 shadow-sm">
+              <img src="pexels-itay-weissman-3616837-5691261.jpg" class="card-img-top" alt="Cake" />
+              <div class="card-body">
+                <h5 class="card-title">Cake</h5>
+                <p class="card-text">A rich celebration cake with fluffy sponge and creamy frosting.</p>
+                <a href="#" class="btn btn-warning">Order Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card project-card h-100 shadow-sm">
+              <img src="pexels-hannah-barata-776560167-28128244.jpg" class="card-img-top" alt="Fish" />
+              <div class="card-body">
+                <h5 class="card-title">Fish</h5>
+                <p class="card-text">Freshly caught fish seasoned with aromatic herbs and grilled to perfection.</p>
+                <a href="#" class="btn btn-warning">Order Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="projects-section py-5 bg-soft">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col text-center text-md-left">
+            <h2 class="text-warning">Gallery</h2>
+            <p class="text-muted">A look inside Thai Pavilion: ambiance, creations, and dining moments.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO-FkHa3aWvsgjLCGZuZYTqQhVp6spk29I8vI_2nv3wWm_8fBL5KooxYLF&s=10" alt="Restaurant interior" class="img-fluid rounded gallery-image shadow-sm" />
+          </div>
+          <div class="col-md-4 mb-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE5CsnyNKXmDP1opsKfcUvlPqiNvB5axaqOID-334Fmw&s=10" alt="Thai dish" class="img-fluid rounded gallery-image shadow-sm" />
+          </div>
+          <div class="col-md-4 mb-4">
+            <img src="https://b.zmtcdn.com/data/pictures/6/37816/0eb72529b86015a813fe39730404f47d.jpg?crop=700%3A400%3B%2A%2C%2A&fit=around%7C700%3A400&output-format=webp" alt="Dessert" class="img-fluid rounded gallery-image shadow-sm" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="projects-section py-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col text-center text-md-left">
+            <h2 class="text-warning">Visit Us</h2>
+            <p class="text-muted">Experience Thai Pavilion in person or reserve a table for your next meal.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card project-card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Location</h5>
+                <p class="card-text">123 Thai Pavilion Lane, Downtown</p>
+                <p class="card-text">Open daily from 11:00 AM to 10:00 PM</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card project-card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Contact</h5>
+                <p class="card-text">Phone: (123) 456-7890</p>
+                <p class="card-text">Email: reservations@thaipavilion.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,11 +1,11 @@
 body {
     background: #252525;
     font-family: "Baloo Tamma 2", cursive;
-    color: #f8f9fa;
+    color: #699ccf;
 }
 
 #social-media {
-    background-color: #313552;
+    background-color: #252525;
 }
 
 .media_link {
@@ -30,11 +30,11 @@ body {
 .media_link h3 {
     margin: 0;
     font-size: 1.2rem;
-    color: #ffffff;
+    color: #7c73c6;
 }
 
 .media_link a {
-    color: #ffffff;
+    color: #6589d6;
     text-decoration: none;
 }
 
