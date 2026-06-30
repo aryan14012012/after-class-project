@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef6f4 0%, #dceef2 100%);
+    color: #1f2f3d;
+}
+
+.navigation {
+    background-color: #2f6f5b;
+    padding: 10px 20px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.balance-box {
+    background: linear-gradient(135deg, #1f4f3d, #2f6f5b);
+    color: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background: #1f4f3d;
+    color: white;
+}
+
+.navigation .nav {
+    gap: 0.5rem;
+}
+
+.navigation .search-form {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.navigation .search-form input {
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    border-radius: 999px 0 0 999px;
+}
+
+.navigation .search-form button {
+    border: none;
+    background: transparent;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 0 999px 999px 0;
+}
+
+.navigation .search-form input:focus {
+    box-shadow: none;
+}
