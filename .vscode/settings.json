@@ -2,5 +2,10 @@
     "liveServer.settings.port": 5501,
     "cSpell.words": [
         "Codingal"
-    ]
+    ],
+    "python.testing.pytestArgs": [
+        "py.charm"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }
