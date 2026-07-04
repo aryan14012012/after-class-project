@@ -57,13 +57,20 @@ function printOutput(num) {
                 if (output != "" || history != "") {
                     output = output == "" ? output : reverseNumberFormat(output);
                     history = history + output;
-                    if (this.id == "=") {
+                    if (this.id == "equals") {
                         var result = eval(history);
                         printOutput(result);
                         printHistory("");
                     }
                     else {
-                        history = history + this.id;
+                        var operatorSymbol = this.id;
+                        if (this.id == "multiply") operatorSymbol = "*";
+                        else if (this.id == "divide") operatorSymbol = "/";
+                        else if (this.id == "add") operatorSymbol = "+";
+                        else if (this.id == "subtract") operatorSymbol = "-";
+                        else if (this.id == "percent") operatorSymbol = "%";
+                        
+                        history = history + operatorSymbol;
                         printHistory(history);
                         printOutput("");
                     }
@@ -77,11 +84,12 @@ function printOutput(num) {
     var number = document.getElementsByClassName("number");
     for(var i = 0; i < number.length; i++) {
         number[i].addEventListener('click', function() {
-            var output = reverseNumberFormat(getOutput());
-            if (output != NaN) { //if output is a number
+            var output = getOutput();
+            if (output === "") {
+                output = this.id;
+            } else {
                 output = output + this.id;
-                printOutput(output);
-            }   
-            
+            }
+            printOutput(output);
         });
     }
