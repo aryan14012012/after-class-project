@@ -1,3 +1,30 @@
+// Dark Mode Toggle
+const darkModeBtn = document.getElementById('darkModeBtn');
+const modeIcon = document.querySelector('.mode-icon');
+
+// Load dark mode preference from localStorage
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+if (isDarkMode) {
+    document.body.classList.add('dark-mode');
+    if (modeIcon) modeIcon.textContent = '☀️';
+}
+
+if (darkModeBtn) {
+    darkModeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        
+        // Update icon
+        if (modeIcon) {
+            modeIcon.textContent = isDark ? '☀️' : '🌙';
+        }
+        
+        // Save preference
+        localStorage.setItem('darkMode', isDark);
+    });
+}
+
+// Login and App Shell
 const loginForm = document.getElementById('loginForm');
 const loginOverlay = document.getElementById('loginOverlay');
 const appShell = document.getElementById('appShell');

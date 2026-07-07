@@ -4,6 +4,129 @@ body {
     background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 45%, #e0f2fe 100%);
     color: #1f2f3d;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 45%, #0f3460 100%);
+    color: #e0e0e0;
+}
+
+body.dark-mode .login-overlay {
+    background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.05), transparent 30%),
+        linear-gradient(135deg, #16213e 0%, #0f3460 45%, #1a1a2e 100%);
+}
+
+body.dark-mode .login-card {
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(22, 33, 62, 0.98));
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .login-card h2,
+body.dark-mode .login-card p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .login-form input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #e0e0e0;
+}
+
+body.dark-mode .login-form input::placeholder {
+    color: rgba(224, 224, 224, 0.5);
+}
+
+body.dark-mode .login-form input:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+body.dark-mode .navigation {
+    background-color: #16213e;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-image: none;
+}
+
+body.dark-mode .card {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .card-header {
+    background: linear-gradient(135deg, #0f3460, #16213e) !important;
+    color: #e0e0e0;
+    background-image: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .balance-box {
+    background: linear-gradient(135deg, #16213e, #0f3460);
+    background-image: none;
+    color: #e0e0e0;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #e0e0e0;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: rgba(224, 224, 224, 0.5);
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #8b5cf6;
+    color: #e0e0e0;
+    box-shadow: 0 0 0 0.25rem rgba(139, 92, 246, 0.25);
+}
+
+body.dark-mode .nav-link {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .nav-link:hover {
+    color: #8b5cf6 !important;
+}
+
+body.dark-mode .btn-light {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #e0e0e0;
+}
+
+body.dark-mode .btn-light:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mode Toggle Button */
+.mode-toggle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-toggle:hover {
+    transform: rotate(20deg);
+}
+
+.mode-icon {
+    font-size: 1.2rem;
 }
 
 .login-overlay {
